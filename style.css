@@ -384,3 +384,206 @@ body {
 .carrusel.full .slider-ul li img {
     height: 280px;
 }
+
+/* ESTILOS RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+    /* Navegación */
+    .nav {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+        padding: 8px 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+
+    /* Slider */
+    .slider {
+        height: 50vh; /* Reducido para menos espacio en blanco */
+    }
+
+    /* Logo */
+    .logo img {
+        width: 200px;
+    }
+
+    /* Hero y overlay */
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    /* Servicios */
+    #servicios {
+        padding: 20px 15px; /* Reducido padding */
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 20px auto;
+    }
+
+    .servicios-grid img {
+        width: 100%;
+        height: auto;
+        min-height: 80px; /* Aumentar tamaño mínimo */
+        object-fit: contain;
+    }
+
+    /* Galería */
+    #galeria {
+        padding: 30px 15px;
+    }
+
+    #galeria h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .row.top {
+        justify-content: center;
+    }
+
+    .carrusel {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .carrusel.full {
+        width: 100%;
+    }
+
+    .carrusel h3 {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .slider-ul li img {
+        height: 150px;
+    }
+
+    .carrusel.full .slider-ul li img {
+        height: 180px;
+    }
+
+    /* Contacto */
+    #contacto {
+        padding: 30px 15px;
+    }
+
+    #contacto h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    #contacto > p {
+        font-size: 14px;
+    }
+
+    .form-contacto {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 40vh;
+    }
+
+    .nav {
+        top: 5px;
+        right: 5px;
+        gap: 5px;
+        padding: 5px 8px;
+    }
+
+    .nav a {
+        font-size: 10px;
+        padding: 3px 4px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .overlay {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .overlay h1 {
+        font-size: 18px;
+    }
+
+    #servicios {
+        padding: 15px 10px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(1, 1fr); /* Una columna para agrandar */
+        gap: 10px;
+        margin: 15px auto;
+    }
+
+    .servicios-grid img {
+        width: 100%;
+        height: auto;
+        min-height: 100px; /* Más grande */
+        object-fit: contain;
+    }
+
+    .carrusel h3 {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .slider-ul li img {
+        height: 120px;
+    }
+
+    .carrusel.full .slider-ul li img {
+        height: 150px;
+    }
+
+    #galeria h2 {
+        font-size: 22px;
+    }
+
+    #contacto h2 {
+        font-size: 22px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
