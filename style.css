@@ -386,6 +386,36 @@ body {
     display: none; /* Ocultar imagen principal para eliminar espacio blanco */
 }
 
+/* WhatsApp flotante */
+.whatsapp-float {
+    display: none; /* Oculto en desktop */
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10001; /* Mayor que logo */
+        background: #25d366;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+}
+
 /* ESTILOS RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
     /* Navegación */
@@ -428,13 +458,15 @@ body {
     }
 
     .servicios-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 arriba, 2 abajo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
         margin: 20px auto;
     }
 
     .servicios-grid img {
-        width: 100%;
+        width: 80%;
         height: auto;
         min-height: 60px;
         object-fit: contain;
@@ -555,13 +587,15 @@ body {
     }
 
     .servicios-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 arriba, 2 abajo, 1 abajo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
         margin: 15px auto;
     }
 
     .servicios-grid img {
-        width: 100%;
+        width: 80%;
         height: auto;
         min-height: 80px;
         object-fit: contain;
