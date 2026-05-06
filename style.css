@@ -36,7 +36,7 @@ body {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 10000; /* Mayor que nav para no ser tapado */
    
 }
 .hero {
@@ -190,6 +190,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
+    min-height: 100px; /* Agrandar loguitos en PC */
 }
 
 /* Estilos para la sección de contacto y formulario */
@@ -381,8 +382,8 @@ body {
     cursor: default;
 }
 
-.carrusel.full .slider-ul li img {
-    height: 280px;
+.slider > img {
+    display: none; /* Ocultar imagen principal para eliminar espacio blanco */
 }
 
 /* ESTILOS RESPONSIVE PARA MÓVILES */
@@ -416,13 +417,18 @@ body {
         font-size: 28px;
     }
 
+    /* Imagen principal oculta en móviles para eliminar espacio blanco */
+    .slider > img {
+        display: none;
+    }
+
     /* Servicios */
     #servicios {
         padding: 20px 15px; /* Reducido padding */
     }
 
     .servicios-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 arriba, 2 abajo */
         gap: 15px;
         margin: 20px auto;
     }
@@ -430,7 +436,7 @@ body {
     .servicios-grid img {
         width: 100%;
         height: auto;
-        min-height: 80px; /* Aumentar tamaño mínimo */
+        min-height: 60px;
         object-fit: contain;
     }
 
@@ -539,12 +545,17 @@ body {
         font-size: 18px;
     }
 
+    /* Imagen principal oculta en móviles */
+    .slider > img {
+        display: none;
+    }
+
     #servicios {
         padding: 15px 10px;
     }
 
     .servicios-grid {
-        grid-template-columns: repeat(1, 1fr); /* Una columna para agrandar */
+        grid-template-columns: repeat(2, 1fr); /* 2 arriba, 2 abajo, 1 abajo */
         gap: 10px;
         margin: 15px auto;
     }
@@ -552,7 +563,7 @@ body {
     .servicios-grid img {
         width: 100%;
         height: auto;
-        min-height: 100px; /* Más grande */
+        min-height: 80px;
         object-fit: contain;
     }
 
