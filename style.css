@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #0f171a;
+}
+
+.titulo {
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+    color: rgb(41, 21, 133);
+    
+}.titulo img {
+    width: 0px;
+
+}
+
+.slider {
+    position: relative; /* MUY IMPORTANTE */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* LOGO SOBRE EL CARRUSEL */
+/* LOGO SOBRE EL CARRUSEL */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+   
+}
+.hero {
+    background-image: url(slide); /* tu foto */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+  /*  background: rgba(255, 87, 34, 0.8); /*esto es el soluciones eficaces */
+    padding: 50px 50px;
+    max-width: 70%;
+}
+
+.overlay h1 {
+   /*  -webkit-text-stroke: 1px rgb(0, 0, 0); /* grosor y color */
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+}
+.logo img {
+    width: 500px; /* tamaño pequeño del logo */
+    height: auto;
+    object-fit: contain;
+}    /* para que quede encima */
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 10px 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.nav a {
+    color: #0f171a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 8px;
+}
+
+.nav a:hover {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+}
+
+.slider ul {
+    display: flex;
+    width: 400vw;
+    height: 100vh;
+    animation: slide 12s infinite ease-in-out;
+}
+
+.slider li {
+    width: 100vw;
+    height: 100vh;
+    list-style: none;
+    position: relative;
+}
+
+.slider li > img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.texto {
+    position: absolute;
+    color: #212d9b;
+    text-align: center;
+    top: 200px;
+    width: 100%;
+}
+
+.texto h2 {
+    font-size: 45px;
+}
+
+/* Animación corregida */
+@keyframes slide {
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+#servicios {
+    
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('fotos/3.jpg.jpeg');
+    background-size: cover;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.servicios-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos para la sección de contacto y formulario */
+#contacto {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 36px;
+    color: #0f171a;
+    margin-bottom: 10px;
+}
+
+#contacto > p {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.form-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0f171a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #212d9b;
+    box-shadow: 0 0 5px rgba(33, 45, 155, 0.3);
+}
+
+.btn-enviar {
+    background-color: #212d9b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #1a2474;
+}
+
+/* Estilos para la galería */
+#galeria {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#galeria h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #0f171a;
+    margin-bottom: 40px;
+}
+
+.galeria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.row.top {
+    justify-content: space-between;
+}
+
+.row.middle {
+    justify-content: center;
+}
+
+.row.bottom {
+    justify-content: center;
+}
+
+.carrusel {
+    width: 45%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel.full {
+    width: 90%;
+}
+
+.carrusel h3 {
+    text-align: center;
+    padding: 10px;
+    background-color: #212d9b;
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+.slider-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 400%; /* 4 imágenes */
+    animation: slide 16s infinite;
+}
+
+.slider-ul li {
+    width: 25%;
+    position: relative;
+}
+
+.slider-ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+.carrusel:hover .slider-ul,
+.carrusel.paused .slider-ul {
+    animation-play-state: paused;
+}
+
+.slider-ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.slider-ul li img:hover,
+.slider-ul li img.selected {
+    transform: scale(1.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.carrusel.paused {
+    cursor: default;
+}
+
+.carrusel.full .slider-ul li img {
+    height: 280px;
+}

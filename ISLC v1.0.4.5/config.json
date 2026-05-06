@@ -1,0 +1,14 @@
+{
+  "StandbyListValue": "1024",
+  "FreeMemoryValue": "7000",
+  "StartMinimized": false,
+  "AlwaysOnTop": false,
+  "CustomTimer": false,
+  "WantedResolution": 1.0,
+  "PollingRateSTR": "1000",
+  "ExclusionList": [],
+  "DarkMode": false,
+  "HotkeyEnabled": false,
+  "HotkeyModifiers": 3,
+  "HotkeyVKey": 80
+}
