@@ -455,6 +455,10 @@ body {
     }
 
     /* Logo */
+    .logo {
+        top: 25%;
+    }
+
     .logo img {
         width: 200px;
     }
@@ -581,6 +585,10 @@ body {
     .nav a {
         font-size: 10px;
         padding: 3px 4px;
+    }
+
+    .logo {
+        top: 20%;
     }
 
     .logo img {
