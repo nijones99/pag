@@ -326,6 +326,10 @@ body {
     width: 90%;
 }
 
+.row.bottom .carrusel.full {
+    width: 45%;
+}
+
 .carrusel h3 {
     text-align: center;
     padding: 10px;
@@ -387,6 +391,10 @@ body {
     cursor: default;
 }
 
+.carrusel.full .slider-ul li img {
+    height: 150px;
+}
+
 /* WhatsApp flotante */
 .whatsapp-float {
     display: block;
@@ -395,27 +403,32 @@ body {
     right: 20px;
     z-index: 10001; /* Mayor que logo */
     background: #25d366;
-    border-radius: 50%;
-    padding: 10px;
+    border-radius: 25px;
+    padding: 10px 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background: #20c157;
 }
 
-.whatsapp-float img {
-    width: 30px;
-    height: 30px;
+.whatsapp-float span {
     display: block;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
     .whatsapp-float {
         bottom: 16px;
         right: 16px;
-        padding: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
     }
 }
 
@@ -517,7 +530,7 @@ body {
     }
 
     .carrusel.full .slider-ul li img {
-        height: 180px;
+        height: 150px;
     }
 
     /* Contacto */
