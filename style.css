@@ -382,39 +382,38 @@ body {
     cursor: default;
 }
 
-.slider > img {
-    display: none; /* Ocultar imagen principal para eliminar espacio blanco */
-}
-
 /* WhatsApp flotante */
 .whatsapp-float {
-    display: none; /* Oculto en desktop */
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10001; /* Mayor que logo */
+    background: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+    display: block;
 }
 
 @media (max-width: 768px) {
     .whatsapp-float {
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 10001; /* Mayor que logo */
-        background: #25d366;
-        border-radius: 50%;
+        bottom: 16px;
+        right: 16px;
         padding: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-        transform: scale(1.1);
-    }
-
-    .whatsapp-float img {
-        width: 30px;
-        height: 30px;
-        display: block;
     }
 }
+
 
 /* ESTILOS RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
